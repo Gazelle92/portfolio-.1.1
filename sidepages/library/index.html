@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중앙도서관</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+<header>
+    <div class="mobileClose">
+        <a href="javascript:void(0)">
+            <span></span>
+            <span></span>
+        </a>
+    </div>
+    <div class="headerInner">
+        <a class="headerLogo"><img src="https://www.snlib.go.kr/include/image/ct/common/logo.png" alt="중앙도서관"></a>
+        <a class="snsLogo"><img src="https://www.snlib.go.kr/include/image/common/ico_sns.png" alt="페이스북 링크"></a>
+        <div class="searchWrap">
+            <div class="searchBox">
+                <select class="searchSelection">
+                    <option>소장자료</option>
+                    <option>홈페이지</option>
+                </select>
+                <div class="keywordSearch">
+                    <input type="text" placeholder="검색어 입력">
+                </div>
+                <a href="javascript:void(0)"></a>
+            </div>
+            <div class="trend"></div>
+            <div class="keywordList">
+                <div class="controlArea">
+                    <a href="javascript:void(0)"></a>
+                    <a href="javascript:void(0)"></a>
+                </div>
+                <div class="swiper-container keywordSlide">
+                    <ol class="swiper-wrapper">
+                        <li class="swiper-slide">카카오프렌즈</li>
+                        <li class="swiper-slide">엉덩이탐정</li>
+                        <li class="swiper-slide">쿠키런</li>
+                        <li class="swiper-slide">마법천자문</li>
+                        <li class="swiper-slide">수학도둑</li>
+                        <li class="swiper-slide">완전한행복</li>
+                        <li class="swiper-slide">전천당</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="searchButton" href="javascript:void(0)"></a>
+    <div class="menu">
+        <ul class="subMenuWrap">
+            <li class="subMenu"><a>도서관안내</a>
+                <ul class="firstUnderMenu">
+                    <li><a>도서관소개</a></li>
+                    <li><a>이용안내</a></li>
+                    <li><a>편의시설</a></li>
+                    <li><a>스마트도서관</a></li>
+                    <li><a>책이음안내</a></li>
+                </ul>
+            </li>
+            <li class="subMenu"><a>자료검색</a>
+                <ul>
+                    <li><a>통합자료검색</a></li>
+                    <li><a>DVD/CD검색</a></li>
+                    <li><a>주제별검색</a></li>
+                    <li><a>신착자료검색</a></li>
+                    <li><a>대출베스트</a></li>
+                    <li><a>공공도서관인기도서</a></li>
+                    <li><a>희망자료신청</a></li>
+                    <li><a>스마트도서관</a></li>
+                </ul>
+            </li>
+            <li class="subMenu"><a>도서정보/디지털</a>
+                <ul>
+                    <li><a>추천도서</a></li>
+                    <li><a>신착도서목록</a></li>
+                    <li><a>대출베스트도서목록</a></li>
+                    <li><a>연속간행물목록</a></li>
+                    <li><a>추천도서 메일링서비스</a></li>
+                    <li><a>디지털서비스</a></li>
+                    <li><a>사서에게 물어보세요</a></li>
+                </ul>
+            </li>
+            <li class="subMenu"><a>문화마당</a>
+                <ul>
+                    <li><a>도서관달력</a></li>
+                    <li><a>문화강좌</a></li>
+                    <li><a>문화행사</a></li>
+                    <li><a>수강신청</a></li>
+                    <li><a>독서치유</a></li>
+                </ul>
+            </li>
+            <li class="subMenu"><a>이용자마당</a>
+                <ul>
+                    <li><a>공지사항</a></li>
+                    <li><a>자주하는질문</a></li>
+                    <li><a>묻고답하기</a></li>
+                    <li><a>사진갤러리</a></li>
+                    <li><a>신청서비스</a></li>
+                    <li><a>설문조사</a></li>
+                </ul>
+            </li>
+            <li class="subMenu"><a>내서재</a>
+                <ul>
+                    <li><a>기본정보</a></li>
+                    <li><a>도서이용정보</a></li>
+                    <li><a>관심자료목록</a></li>
+                    <li><a>나의신청정보</a></li>
+                    <li><a>나의게시글</a></li>
+                    <li><a>도서추천서비스</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="menuButtonWrap">
+            <li class="menuBar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </li>
+            <li class="subMenuBg"></li>
+        </ul>
+        
+    </div>
+    <div class="mobileSearchWrap">
+        <div class="searchBox" id="mobileSearch">
+            <select class="searchSelection">
+                <option>소장자료</option>
+                <option>홈페이지</option>
+            </select>
+            <div class="keywordSearch">
+                <input type="text" placeholder="검색어 입력">
+            </div>
+            <a href="javascript:void(0)"></a>
+        </div>
+    </div>
+    <div class="menuBar" id="mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="mobileMenu">
+        <div class="mobileLink libraryLink">
+            <a href="javascript:void(0)" class="button llButton">도서관 바로가기</a>
+            <ul>
+                <li><a href="javascript:void(0)">성남도서관사업소</a></li>
+                <li><a href="javascript:void(0)">구미도서관</a></li>
+                <li><a href="javascript:void(0)">논골도서관</a></li>
+                <li><a href="javascript:void(0)">무지개도서관</a></li>
+                <li><a href="javascript:void(0)">복정도서관</a></li>
+                <li><a href="javascript:void(0)">분당도서관</a></li>
+                <li><a href="javascript:void(0)">서현도서관</a></li>
+                <li><a href="javascript:void(0)">수정도서관</a></li>
+                <li><a href="javascript:void(0)">운중도서관</a></li>
+                <li><a href="javascript:void(0)">위례도서관</a></li>
+                <li><a href="javascript:void(0)">중원도서관</a></li>
+                <li><a href="javascript:void(0)">중원어린이도서관</a></li>
+                <li><a href="javascript:void(0)">판교도서관</a></li>
+                <li><a href="javascript:void(0)">판교어린이도서관</a></li>
+                <li><a href="javascript:void(0)">해오름도서관</a></li>
+                <li><a href="javascript:void(0)">작은도서관</a></li>
+            </ul>
+        </div>
+        <div class="mobileLink languageLink">
+            <a href="javascript:void(0)" class="button lgButton">Language</a>
+            <ul>
+                <li><a href="javascript:void(0)">English</a></li>
+                <li><a href="javascript:void(0)">中國語</a></li>
+                <li><a href="javascript:void(0)">日本語</a></li>
+
+            </ul>
+        </div>
+        
+
+        <ul class="mobileMenuUnder">
+            <li>
+                <a href="javascript:void(0)">도서관안내</a>
+                <ul>
+                    <li><a href="javascript:void(0)">도서관소개</a></li>
+                    <li><a href="javascript:void(0)">이용안내</a></li>
+                    <li><a href="javascript:void(0)">편의시설</a></li>
+                    <li><a href="javascript:void(0)">스마트도서관</a></li>
+                    <li><a href="javascript:void(0)">책이음안내</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">자료검색</a>
+                <ul>
+                    <li><a href="javascript:void(0)">통합자료검색</a></li>
+                    <li><a href="javascript:void(0)">DVD/CD검색</a></li>
+                    <li><a href="javascript:void(0)">주제별검색</a></li>
+                    <li><a href="javascript:void(0)">신착자료검색</a></li>
+                    <li><a href="javascript:void(0)">대출베스트</a></li>
+                    <li><a href="javascript:void(0)">공공도서관인기도서</a></li>
+                    <li><a href="javascript:void(0)">희망자료신청</a></li>
+                    <li><a href="javascript:void(0)">스마트도서관</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">도서정보/디지털</a>
+                <ul>
+                    <li><a href="javascript:void(0)">추천도서</a></li>
+                    <li><a href="javascript:void(0)">신착도서목록</a></li>
+                    <li><a href="javascript:void(0)">대출베스트도서목록</a></li>
+                    <li><a href="javascript:void(0)">연속간행물목록</a></li>
+                    <li><a href="javascript:void(0)">추천도서 메일링서비스</a></li>
+                    <li><a href="javascript:void(0)">디지털서비스</a></li>
+                    <li><a href="javascript:void(0)">사서에게 물어보세요</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">문화마당</a>
+                <ul>
+                    <li><a href="javascript:void(0)">도서관달력</a></li>
+                    <li><a href="javascript:void(0)">문화강좌</a></li>
+                    <li><a href="javascript:void(0)">문화행사</a></li>
+                    <li><a href="javascript:void(0)">수강신청</a></li>
+                    <li><a href="javascript:void(0)">독서치유</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">이용자마당</a>
+                <ul>
+                    <li><a href="javascript:void(0)">공지사항</a></li>
+                    <li><a href="javascript:void(0)">자주하는질문</a></li>
+                    <li><a href="javascript:void(0)">묻고답하기</a></li>
+                    <li><a href="javascript:void(0)">사진갤러리</a></li>
+                    <li><a href="javascript:void(0)">신청서비스</a></li>
+                    <li><a href="javascript:void(0)">설문조사</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">내서재</a>
+                <ul>
+                    <li><a href="javascript:void(0)">기본정보</a></li>
+                    <li><a href="javascript:void(0)">도서이용정보</a></li>
+                    <li><a href="javascript:void(0)">관심자료목록</a></li>
+                    <li><a href="javascript:void(0)">나의신청정보</a></li>
+                    <li><a href="javascript:void(0)">나의게시글</a></li>
+                    <li><a href="javascript:void(0)">도서추천서비스</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="javascript:void(0)">홈페이지 이용안내</a>
+                <ul>
+                    <li><a href="javascript:void(0)">사이트맵</a></li>
+                    <li><a href="javascript:void(0)">이용약관</a></li>
+                    <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                    <li><a href="javascript:void(0)">영상정보처리기기운영방침</a></li>
+                    <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="qrBox">
+            <p><a href="javascript:void(0)">로그인을 하시면 모바일회원증을<br/> 확인하실 수 있습니다</a></p>
+        </div>
+    </nav>
+    <div class="bg"></div>
+</header>
+
+<section class="banner1">
+    <p class="slogan"><img src="https://www.snlib.go.kr/include/image/ct/main/p_slogan.png" alt="지식의 보물창고 시민을 위한 희망의 등대 성남시 중앙도서관"></p>
+    <div class="sectionWrap">
+        <div class="firstSection">
+            <h2>로그인</h2>
+            <div>
+                <div class="inputWrap">
+                    <div><span></span><input type="text" placeholder="아이디"></div>
+                    <div><span></span><input type="text" placeholder="비밀번호"></div>
+                    <a href="javascript:void(0)">LOGIN</a>
+                </div>
+                <div class="inputInfo">
+                    <a href="javascript:void(0)">회원가입</a>
+                    <a href="javascript:void(0)">아이디찾기</a>
+                    <a href="javascript:void(0)">비밀번호재발급</a>
+                </div>
+            </div>
+        </div>
+        <div class="secondSection">
+            <h2>나만의 도서관</h2>
+            <ul>
+                <li><a></a>대출현황</li>
+                <li>예약현황</li>
+                <li>상호대차조회</li>
+                <li>희망도서신청조회</li>
+                <li>관심도서목록</li>
+                <li>수강신청조회</li>
+            </ul>
+        </div>
+        <div class="thirdSection">
+            <h2>도서관 휴일안내</h2>
+            <div class="schedule">
+                <div class="month">08</div>
+                <ul class="days">
+                    <li>05</li>
+                    <li>12</li>
+                    <li>19</li>
+                    <li>26</li>
+                </ul>
+            </div>
+            
+            <ul class="dayoff">
+                <li><i></i>전체휴관일</li>
+                <li><i></i>자료휴관일</li>
+            </ul>
+            <p>매주 월요일, 법정공휴일 정기휴관</p>
+        </div>
+    </div>
+</section>
+<nav class="banner2">
+    <div class="shortcut">
+        <ul>
+            <li><i></i>희망도서신청</li>
+            <li><i></i>자료검색도움말</li>
+            <li><i></i>열람실좌석현황</li>
+            <li><i></i>디지털서비스</li>
+            <li><i></i>문화행사</li>
+            <li><i></i>수강신청</li>
+            <li><i></i>식당안내</li>
+            <li><i></i>책드림사업</li>
+            <li><i></i>북스타트사업</li>
+            <li><i></i>묻고답하기</li>
+        </ul>
+    </div>
+</nav>
+<section class="banner3">
+    <div class="infoWrap">
+        <div class="infoGroup">
+            <article class="openTime">
+                <div>
+                    <h2>도서관 이용시간 안내</h2>
+                    <ul>
+                        <li>- 제1·2문헌정보실(평일/주말)<br/>
+                            &nbsp;&nbsp;09:00 ~ 20:00 / 09:00 ~ 18:00</li>
+                        <li>- 어린이가족열람실 및 전자정보실 09:00 ~ 18:00</li>
+                        <li>- 일반열람실(평일/주말)<br>
+                            &nbsp;&nbsp;09:00 ~ 20:00 / 09:00 ~ 18:00<br>
+                            <em>*3월15일부터평일09:00~22:00 주말09:00~20:00</em>
+                        </li>
+                        <li>※ 좌석수 30%이내 이용가능</li>
+                    </ul>
+                </div>
+            </article>
+            <article class="inquiry">
+                <div>
+                    <h2>이용문의 안내</h2>
+                    <img src="https://www.snlib.go.kr/include/image/common/ico_main_telephone.png" alt="이용문의 안내">
+                    <ul>
+                        <li>Tel : 031-729-4500</li>
+                        <li>Fax : 031-729-4629</li>
+                    </ul>
+                </div>
+            </article>
+            <div class="linkIcon">
+                <a href="javascript:void(0)">오시는길
+                    <img src="https://www.snlib.go.kr/include/image/common/ico_main_locaption.png" alt="오시는길">
+                </a>
+                <a href="javascript:void(0)">FAQ
+                    <img src="https://www.snlib.go.kr/include/image/common/ico_main_faq.png" alt="FAQ">
+                </a>
+            </div>
+        </div>
+        <div class="infoBoard">
+            <ul class="tab">
+                <li><a href="javascript:void(0)" class="tab_1">공지사항</a></li>
+                <li><a href="javascript:void(0)" class="tab_2">수강신청</a></li>
+            </ul>
+            <a href="javascript:void(0)"><img src="https://www.snlib.go.kr/include/image/button/btn_more.png" alt="공지사항 더보기"></a>
+            <div class="noticeBoard">
+                <ul class="nbUnder_1">
+                    <li><a href="javascript:void(0)">중앙도서관 문화프로그램 신청 '배움숲' 회원가입 안내 (7월부터변경)</a><span>2021-06-15</span></li>
+                    <li><a href="javascript:void(0)">중앙도서관 문화프로그램  '배움숲' 수강신청 안내 (7월부터변경)</a><span>2021-06-15</span></li>
+                    <li><a href="javascript:void(0)">성남시 일반열람실 이용시간 안내 및 도시락코너 중단 안내 </a><span>2021-03-12</span></li>
+                    <li><a href="javascript:void(0)">2021년 여름 독서교실 수강생 모집 안내(초4,5학년) </a><span>2021-06-25</span></li>
+                    <li><a href="javascript:void(0)">(독서토론저자특강) 젠트리피케이션 쫌 아는 10대 - 저자 장성익 </a><span>2021-07-19</span></li>
+                </ul>
+                <ul class="nbUnder_2">
+                    <li><a href="javascript:void(0)">-은빛독서나눔이- 동화나라여행(8/10 화)</a><span>2021-07-21</span></li>
+                    <li><a href="javascript:void(0)">-은빛독서나눔이- 동화나라여행(8/12 화)</a><span>2021-07-21</span></li>
+                    <li><a href="javascript:void(0)">-은빛독서나눔이- 동화나라여행(8/17 화)</a><span>2021-07-19</span></li>
+                    <li><a href="javascript:void(0)">-은빛독서나눔이- 동화나라여행(8/19 화)</a><span>2021-07-19</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="banner4">
+    <div class="infoWrap">
+        <div class="bookInfo">
+            <ul>
+                <li><a href="javascript:void(0)">추천도서</a></li>
+                <li><a href="javascript:void(0)">신작도서</a></li>
+                <li><a href="javascript:void(0)">대출베스트</a></li>
+                <li><a href="javascript:void(0)">공공도서관 인기도서</a></li>
+                
+            </ul>
+            <a href="javascript:void(0)" class="menuBar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <div class="swiper-container mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/15513559.jpg" alt="왜요, 그 말이 어때서요? : 나도 모르게 쓰는 차별의 언어"></a>
+                        <span>왜요, 그 말이 어때서요? : 나도 모르게 쓰는 차별의 언어</span>
+                        <span>김청연 지음 ; 코피루왁 그림</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/16489381.jpg" alt="나는 해파리입니다"></a>
+                        <span>나는 해파리입니다</span>
+                        <span>베아트리스 퐁타넬 글 ; 알렉상드라 위아르 그림 ; 김라헬 옮김</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/13424876.jpg" alt="한밤중 달빛 식당. 2-65"></a>
+                        <span>한밤중 달빛 식당. 2-65</span>
+                        <span>이분희 글 ; 윤태규 그림</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/15043771.jpg" alt="가재가 노래하는 곳"/></a>
+                        <span>가재가 노래하는 곳</span>
+                        <span>델리아 오언스 지음 ; 김선형 옮김</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/07251392.jpg" alt="모든 것은 빛난다 /"/></a>
+                        <span>모든 것은 빛난다 /</span>
+                        <span>휴버트 드레이퍼스;숀 도런스 켈리 [공]지음;김동규 옮김</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/15652973.jpg" alt="일의 기쁨과 슬픔 : 장류진 소설집"/></a>
+                        <span>일의 기쁨과 슬픔 : 장류진 소설집</span>
+                        <span>장류진 지음</span>
+                    </div>     
+                </div>
+
+            </div>
+        </div>
+        <div class="innerBanner">
+            <div class="swiper-container nextSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/52668_1_20201222102318554.png" alt="한솔작은도서관, 하늘달팽이 작은도서관 임시휴관 "/></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/55049_1_20200625135028566.jpg" alt="하나된 성남, 시민이 시장입니다. 도서관에서 책도 빌리고 도서구입 모바일 성남사랑 상품권도 받는 첫출발 책드림 신청하세요
+                            첫출발 책드림이란 성남시에 거주하는 청년이 만 19세가 되는 해에 성남시립공공도서관에서 6권이상 책을 빌리면 도서구입전용 모바일 성남사랑상품권 2만원을 연1회 드리는 사업입니다. 신청기간 2020.1.2~2020.12.13 대상 만 19세 성남시 거주청년(2001년생) 무느이 031)729-4673 (도서관지원과) 기타 자세한 사항은 성남시립도서관 홈페이지 공지사항 참조 성남시"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/60981_1_20210429161732032.jpg" alt="경기도도서관정보서비스 / 무료택배대출 누구나 편리하게 도서관을 향유하도록 / 내 생애 첫 도서관 두루두루 www.Libreary.kr"/></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="javascript:void(0)"><img src="./img/62294_1_20210715105024342.jpg" alt="경기도사이버도서관 전자책 페이지"/></a>
+                    </div>
+
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footerInner">
+        <ul>
+            <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+            <li><a href="javascript:void(0)">영상정보처리기기운영·관리방침</a></li>
+            <li><a href="javascript:void(0)">이용약관</a></li>
+            <li><a href="javascript:void(0)">이메일무단수집거부</a></li>
+        </ul>
+        <div class="familySite">
+            <select>
+                <option value="#">유관기관 바로가기</option>
+                <option value="#">성남시청</option>
+                <option value="#">수정구청</option>
+                <option value="#">중원구청</option>
+                <option value="#">분당구청</option>
+                <option value="#">평생학습포털 배움숲</option>
+            </select>
+            <a href="javascript:void(0)">GO</a>
+        </div>
+        <div class="footerInfo">
+            <address>(우)13514 경기도 성남시 분당구 판교로 546(야탑동) &emsp;
+                <span>Tel. 031-729-4500&emsp;</span>
+                <span>Fax. 031-729-4629</span>
+            </address>
+            <cite>Copyright © 성남시도서관사업소. All Rights Reserved.</cite>
+        </div>
+    </div>
+</footer>    
+<script src="./main.js" defer></script>
+</body>
+
+</html>

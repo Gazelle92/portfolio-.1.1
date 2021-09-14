@@ -1,0 +1,167 @@
+input[type="text"] {
+    font-size: 24px;
+  }
+  
+  .warning{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+    font-size: 5vw;
+  }
+  /* ---- button ---- */
+  
+  .filter_section{
+      position: relative;
+      padding: 120px 0;
+      min-height: 80vh;
+  }
+
+  .serch_wrap{
+    position: relative;
+}
+.serch_wrap input{
+    width: 300px;
+    height: 40px;
+    margin: 0 auto 20px auto;
+    justify-content: center;
+    display: flex;
+    padding-left: 10px;
+    
+}
+#filters{
+    margin: 10px 0;
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+  .button {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    box-sizing: border-box;
+    border: 2px solid #555555;
+    width: 110px;
+    border-radius: 7px;
+    color: #222;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-shadow: 0 1px white;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #949494;
+    text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+    color: #222;
+  }
+  
+  .button:active,
+  .button.is-checked {
+    background-color: #949494;
+  }
+  
+  .button.is-checked {
+    color: white;
+
+  }
+  
+  
+  /* ---- button-group ---- */
+  
+  .button-group:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  .button-group .button {
+    float: left;
+
+    margin: 5px;
+  }
+  
+  /* ---- grid ---- */
+  
+  .grid {
+    background-color: #f6f6f6;
+    padding: 0;
+    width: 1520px;
+    margin: 0 auto;
+  }
+
+  
+  /* clear fix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  
+  /* ---- .element-item ---- */
+  
+  .element-item{
+    position: relative;
+    float: left;
+    width: 360px;
+    padding: 10px;
+
+    color: #262524;
+    flex-direction: column;
+  }
+  
+  
+  .element-item > * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .element-item img{
+    width: 100%;
+  }
+  
+  /*NEW*/
+  
+  
+  .name{
+    margin: 15px 0;
+  }
+  .time_cover{
+    margin-bottom: 15px;
+  }
+  .time_cover{
+    font-size: 14px;
+  }
+  
+  .kind{
+    margin-bottom: 15px;
+  }
+  .kind{
+    font-size: 14px;
+  }
+
+
+  @media only screen and (max-width: 1520px) {
+    .grid{
+        width: 1140px;
+    }
+}
+  @media only screen and (max-width: 1140px) {
+      .grid{
+          width: 760px;
+      }
+      #filters{
+        width: 100%;
+        margin: 0 auto;
+      }
+  }
+  @media only screen and (max-width: 760px) {
+    .grid{
+        width: 380px;
+    }
+    .element-item{
+      width: 100%;
+      max-width: calc(100vw - 20px);
+  }
+}

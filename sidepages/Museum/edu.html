@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교육</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/colume.css"/>
+    <link rel="stylesheet" href="./css/board.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+
+    
+</head>
+<body>
+  <header>
+
+    <a href="index.html"><img class="header_logo" src="./img/header_logo.png" alt="중앙박물관 로고"/></a>
+    <div class="mobileCover"></div>
+    <ul>
+      <li><a href="./index.html">전시<div class="header_border"></div></a></li>
+      <li><a href="./edu.html">교육행사<div class="header_border"></div></a></li>
+      <li><a href="./filter.html">소장품<div class="header_border"></div></a></li>
+      <li><a href="./board.html">학술출판<div class="header_border"></div></a></li>
+      <li><a href="./news.html">소식참여<div class="header_border"></div></a></li>
+    </ul>
+    <div id="border"></div>
+    <div class="mobileButton">
+      <span></span><span></span>
+    </div>
+    
+</header>
+
+<div id="wrap">
+  <section class="searchbox" id="main"> 
+        <h1>전체교육</h1>
+        <div class="edu_option">
+          <div class="innr_oeption">
+            <div class="option_box op_form">
+              <h4>접수양식</h4>
+              <ul>
+                <li><label><input id="adult" class="edu_option" type='checkbox' name='option' value='성인' onclick='getCheckboxValue()'/> 성인</label></li>
+                <li><label><input id="teen" class="edu_option" type='checkbox' name='option' value='청소년' onclick='getCheckboxValue()'/> 청소년</label></li>
+                <li><label><input id="student" class="edu_option" type='checkbox' name='option' value='학생단체' onclick='getCheckboxValue()'/> 학생단체</label></li>
+                <li><label><input id="teacher" class="edu_option" type='checkbox' name='option' value='교사' onclick='getCheckboxValue()'/> 교사</label></li>
+                <li><label><input id="inpaired" class="edu_option" type='checkbox' name='option' value='장애인' onclick='getCheckboxValue()'/> 장애인</label></li>
+                <li><label><input id="culture" class="edu_option" type='checkbox' name='option' value='다문화' onclick='getCheckboxValue()'/> 다문화</label></li>
+                <li><label><input id="military" class="edu_option" type='checkbox' name='option' value='군인' onclick='getCheckboxValue()'/> 군인</label></li>
+                <li><label><input id="family" class="edu_option" type='checkbox' name='option' value='가족' onclick='getCheckboxValue()'/> 가족</label></li>
+                <li><label><input id="group" class="edu_option" type='checkbox' name='option' value='단체' onclick='getCheckboxValue()'/> 단체</label></li>
+                <li><label><input id="child" class="edu_option" type='checkbox' name='option' value='어린이' onclick='getCheckboxValue()'/> 어린이</label></li>
+                
+              </ul>
+            </div>
+            <!--<div class="option_box op_method">
+              <h4>접수양식</h4>
+              <ul>
+                <li><label><input id="online" class="edu_option" type='checkbox' name='option' value='online' onclick='getCheckboxValue()'/> 온라인접수</label></li>
+                <li><label><input id="phone" class="edu_option" type='checkbox' name='option' value='phone' onclick='getCheckboxValue()'/> 전화접수</label></li>
+                <li><label><input id="mail" class="edu_option" type='checkbox' name='option' value='mail' onclick='getCheckboxValue()'/> 우편접수</label></li>
+                <li><label><input id="fax" class="edu_option" type='checkbox' name='option' value='fax' onclick='getCheckboxValue()'/> 팩스접수</label></li>
+                <li><label><input id="spot" class="edu_option" type='checkbox' name='option' value='spot' onclick='getCheckboxValue()'/> 현장접수</label></li>
+              </ul>
+            </div>-->
+            <div class="option_search_cover">
+              <div class="option_search">
+                <input type="text" id="value" placeholder="교육과정명" onKeypress="javascript:if(event.keyCode==13) {filter()}">
+                <input id="search_button" src="https://www.museum.go.kr/ux/content/images/common/btn/btn_board_search.png" type="image" alt="검색">
+              </div>
+              <a href="#" class="closeSearch">
+                <span>간편검색</span>
+                <img src="https://www.museum.go.kr/ux/content/images/common/ico/ico_circle_close.png" alt="간편검색"/>
+              </a>
+            </div>
+            <div class="option_filter">
+              <div class="list_head">
+                <img src="https://www.museum.go.kr/ux/content/images/common/ico/ico_filter_img.png" alt="선택한 필터"/>
+                <span>선택한필터</span>
+              </div>
+              <p id="result"></p>
+              <a class="reset_button">초기화
+                <img src="https://www.museum.go.kr/ux/content/images/common/ico/ico_reset_img.png" alt="필터 초기화"/>
+              </a>
+            </div>
+          </div>
+        </div>
+
+<!--        <div class="seach_cover">
+          <div class="board_search">
+            <input type="text" id="value3" placeholder="교육과정명" onKeypress="javascript:if(event.keyCode==13) {filter()}">
+            <input id="search_button" src="https://www.museum.go.kr/ux/content/images/common/btn/btn_board_search.png"
+              type="image">
+          </div>
+        </div>-->
+
+        <div class="category">
+          <ul>
+            <li><a href="#">현재교육</a></li>
+            <li><a href="#">지난교육</a></li>
+          </ul>
+        </div>
+
+
+
+        <div class="board_edu item online adult teacher">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/07/ED3F1C7B-7284-93B5-948F-B47E6F88A54A_thumb.jpg" alt="2021년 여름방학 초·중등교사 박물관 문화연수"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>성인ㆍ전문인력</li>
+                    <li>교사</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">2021년 여름방학 초·중등교사 박물관 문화연수</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>현직 초·중등학교 교사 20명(회당)</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-08-12 - 2021-08-13</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021-07-14 - <p>2021-07-27</p></span>
+                <span>온라인</span>
+                <span>접수예정</span>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="board_edu item online adult">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/09/A0EEBF4E-193D-2362-465B-42CDD707E45C_thumb.gif" alt="[6.21(월)~6.27(일)]도서관 이용 사전예약"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>성인ㆍ전문인력</li>
+                    <li>성인</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">[6.21(월)~6.27(일)]도서관 이용 "사전예약"</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>일반</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-06-21 - 2021-06-27</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.06.20 - 2021.06.27</span>
+                <span>온라인</span>
+                <span>접수중</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item phone child">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2020/10/C17B6CAF-C73D-B579-17C3-5021B208BAB5_thumb.jpg" alt="[소속박물관연계] 두지와 토랑이의 랜선 투어!"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>어린이박물관</li>
+                    <li>어린이</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">[소속박물관연계] 두지와 토랑이의 랜선 투어!</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>초등학교 4~6학년 개인</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-07-01 - 2021-07-22</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.06.17 - 2021.07.19</span>
+                <span>온라인</span>
+                <span>접수중</span>
+            </li>
+          </ul>
+        </div>
+
+
+
+        <div class="board_edu item phone family">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/05/8957948A-30B6-2AD0-F1C1-AA00829D9EA3_thumb.JPG" alt="[특별전 연계] 인류의 흔적을 찾아라!"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>외국인</li>
+                    <li>가족</li>
+                    <li>직장인</li>
+                </ul>
+                <a class="name">[특별전 연계] 인류의 흔적을 찾아라!</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>관람객 누구나</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-05-29 - 2021-09-25</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.05.29 - 2021.09.25</span>
+                <span>온라인</span>
+                <span>접수중</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item spot adult group">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/06/9C2921D9-EDF8-911A-E66E-70098EDF7D63_thumb.jpg" alt="[온라인 교육] 전시품과 함께하는 힐링 여행(6월)"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>성인</li>
+                    <li>전문인력</li>
+                </ul>
+                <a class="name">[온라인 교육] 전시품과 함께하는 힐링 여행(6월)</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>누구나</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-06-30</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.06.17 - 2021.07.19</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item inpaired">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/03/3DB3D18F-D83A-0515-1087-19A00F9A8BD1_thumb.jpg" alt="2021년 박물관 우리들의 꿈마루"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>희망계층</li>
+                    <li>장애인</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">2021년 박물관 우리들의 꿈마루</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>장애인 학교, 기관 및 관련 단체 / 회당 15명 내외</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-04-16 - 2021-06-25</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.03.23 - 2021.06.25</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item group student fax">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/06/09E36A6B-3EBE-3F11-687A-BB5D7FFA4FAD_thumb.jpg" alt="하반기 학급단체 대상 '전문직 체험교실'-보존과학자-"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>청소년</li>
+                    <li>학생단체</li>
+                </ul>
+                <a class="name">하반기 학급단체 대상 '전문직 체험교실'-보존과학자-</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>초등학교 5~6학년, 중학교 1학년 학급단체</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-09-06 - 2021-11-29</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.06.07 - 2021.11.22</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item student">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/02/7D40E29F-D014-B573-38D1-7AC961D0FF1E_thumb.jpg" alt="[온라인 교육] 상반기 학급단체 대상 '전문직 체험교실'-보존과학자"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>청소년</li>
+                    <li>학생단체</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">[온라인 교육] 상반기 학급단체 대상 '전문직 체험교실'-보존과학자</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>	초등학교 5~6학년, 중학교 1학년 학급단체</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-03-31 - 2021-07-28</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.02.15 - 2021.06.21</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item military">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2021/04/F20EA28B-5096-9EFC-D0A0-6A3E3E80197C_thumb.PNG" alt="2021년 온라인 보존과학 기초 연수"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>군인</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">2021년 온라인 보존과학 기초 연수</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>국.공.사립.대학박물관 학예사 및 보존과학 관련 업무담당자 등</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2021-05-10 - 2021-05-12</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2021.04.19 - 2021.04.27</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="board_edu item teen">
+          <ul>
+            <li class="be edu_box1">
+                <img src="https://www.museum.go.kr/uploadfile/ecms/media/2019/06/78DE196E-FB5B-C466-F036-5632D61ADDD5_thumb.JPG" alt="[여름방학] 교과서는 살아 있다"/>
+            </li>
+            <li class="be edu_box2">
+                <ul class="edu_category">
+                    <li>청소년</li>
+                    <li>선착순</li>
+                </ul>
+                <a class="name">[여름방학] 교과서는 살아 있다</a>
+                <ul class="edu_info">
+                    <li>
+                        <h4>교육대상</h4>
+                        <span>	초등학생 4~6학년, 중학생 1~2학년 개인 30명 이내</span><br/>
+                    </li>
+                    <li>
+                        <h4>교육기간</h4>
+                        <span>2019-08-07 - 2019-08-12</span>
+                    </li>
+                </ul>
+            </li>
+            <li class="be edu_box3">
+                <span>2019.07.01 - 2019.08.09</span>
+                <span>온라인</span>
+                <span>접수마감</span>
+            </li>
+          </ul>
+        </div>
+
+      
+       
+
+</section>
+
+<nav class="section3">
+  <div class="info">
+    <div class="info_wrap">
+    <ul class="info_section">
+      <li>관람안내</li>
+      <li>전시해설</li>
+      <li>예약하기</li>
+      <li>관람/편의시설</li>
+      <li>오시는길</li>
+    </ul>
+    <ul class="info_section">
+      <li>상설전시</li>
+      <li>특별전시</li>
+      <li>디지털 실감 영상관</li>
+      <li>온라인전시관</li>
+      <li>우리문화재 국외전시</li>
+      <li>소속국립박물관전시</li>
+      <li>전시도록</li>
+      <li>외국박물관문화재</li>
+    </ul>
+    <ul class="info_section">
+      <li>교육신청</li>
+      <li>교육자료</li>
+      <li>교육소식</li>
+      <li>스튜디오 몬</li>
+      <li>문화행사</li>
+      <li>온라인 영상 학습 자료실</li>
+    </ul>
+    <ul class="info_section">
+      <li>큐레이터 추천 소장품</li>
+      <li>소장품검색</li>
+      <li>국보/보물 검색</li>
+      <li>수어동영상</li>
+      <li>소장품 열람/복제</li>
+      <li>문화재 기증안내</li>
+    </ul>
+  </div>
+
+  <div class="info_wrap">
+    <ul class="info_section">
+      <li>정기간행물</li>
+      <li>고고학</li>
+      <li>역사학</li>
+      <li>미술사학</li>
+      <li>아시아학</li>
+      <li>도서관</li>
+      <li>기타</li>
+    </ul>
+    <ul class="info_section">
+      <li>소식</li>
+      <li>영상</li>
+      <li>자원봉사안내</li>
+      <li>학예사 자격증 안내</li>
+      <li>전자민원</li>
+      <li>정보공개</li>
+    </ul>
+    <ul class="info_section">
+      <li>인사말</li>
+      <li>비전과 전략</li>
+      <li>발자취</li>
+      <li>조직 및 업무</li>
+      <li>시설 소개</li>
+      <li>수장고</li>
+      <li>박물관관련자료</li>
+    </ul>
+    <ul class="info_border">
+      <li><div class="info_line"></div>어린이박물관</li>
+      <li><div class="info_line"></div>학예사자격증</li>
+      <li><div class="info_line"></div>e뮤지엄</li>
+      <li><div class="info_line"></div>외규장각 의궤 원문</li>
+      <li><div class="info_line"></div>이러닝</li>
+      <li><div class="info_line"></div>박물관 신문</li>
+      <li><div class="info_line"></div>문화상품점</li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<footer>
+  <div class="footer sec1">
+    <div class="sec1_info1">
+      <h4>문화유산표준관리시스템</h4>
+      <h4>VCM 가상명품박물관</h4>
+      <h4>청년멘토</h4>
+    </div>
+    <div class="sec1_info2">
+      <h4>개인정보처리방침</h4>
+      <span>이용약관</span>
+      <span>전자민원</span>
+      <span>공공데이터개방</span>
+      <span>저작권정책</span>
+      <span>클린신고센터</span>
+      <span>찾아오시는길</span>
+    </div>
+  </div>
+
+  <div class="footer sec3">
+    <span>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+      대표전화 02-2077-9000</span>
+    
+    <div class="sns_link">
+      <div class="border"><a href="#">FACEBOOK</a></div>
+      <div class="border"><a href="#">INSTAGRAM</a></div>
+      <div class="border"><a href="#">YOUTUBE</a></div>
+    </div>
+  </div>
+  <div class="footer sec2">
+    <div class="modal_box">
+      <div class="modal">
+        <span>관련사이트 바로가기
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>국립박물관 문화재단</li>
+            <li>국립중앙박물관회</li>
+            <li>사단법인 한국박물관협회</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal">
+        <span>소속박물관 바로가기
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>국립경주박물관</li>
+            <li>국립전주박물관</li>
+            <li>국립대구박물관</li>
+            <li>국립광주박물관</li>
+            <li>국립부여박물관</li>
+            <li>국립공주박물관</li>
+            <li>국립진주박물관</li>
+            <li>국립청주박물관</li>
+            <li>국립김해박물관</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal">
+        <span>가이드북 다운로드
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>한국어(PDF)</li>
+            <li>English(PDF)</li>
+            <li>中文(PDF)</li>
+            <li>日本語(PDF)</li>
+            <li>Русский(PDF)</li>
+            <li>Français(PDF)</li>
+            <li>박물관 야외정원 안내</li>
+            <li>프로그램(5월~7월)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4>© National Museum of Korea.</h4>
+  </div>
+  <div class="grid_vertical v_1 footer_v"></div>
+  <div class="grid_vertical v_2 footer_v"></div>
+  <div class="grid_horizontal h_1 footer_h"></div>
+  <div class="grid_horizontal h_2 footer_h"></div>
+  <div class="grid_horizontal h_3 footer_h"></div>
+
+</footer>
+</div>
+</body>
+<script src="./js/main.js" defer></script>
+<script src="./js/jquery.js" defer></script>
+<script src="./js/edu.js" defer></script>
+
+</html>

@@ -1,0 +1,447 @@
+@font-face {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    src: url(./font/AppleSDGothicNeoM.ttf);
+  }
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+body{
+    height: 100vh;
+    touch-action: none;
+    overflow: hidden;
+}
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+.title{
+    letter-spacing: -1px;
+    overflow: hidden;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+    height: 45px;
+}
+header .name_result .span{
+    background-color: unset;
+}
+.name_result{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+.name_result .span p{
+    display: inline-block;
+    background-color: #fff;
+}
+.year_board{
+    display: inline-flex;
+}
+
+.year_board ul{
+    position: relative;
+}
+
+.year_board ul:nth-child(1){
+    transition: ease 1s top;
+}
+.year_board ul:nth-child(2){
+    transition: ease 0.8s top;
+}
+.year_board ul:nth-child(3){
+    transition: ease 0.6s top;
+}
+.year_board ul:nth-child(4){
+    transition: ease 0.4s top;
+}
+
+.year_board ul li{
+    height: 45px;
+}
+
+
+#wrap{
+    height: 180vw;
+    width: 180vw;
+    max-width: 1800px;
+    max-height: 1800px;
+    min-width: 1400px;
+    min-height: 1400px;
+    background-color: #fff;
+    position: fixed;
+    transform: translateX( -50%);
+    left: 50%;
+    top: 65%;
+}
+#board{
+    transform: rotate(00deg);
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+
+    border-radius: 100%;
+    transition: ease 0.5s all;
+}
+.card_wrap{
+    position: absolute;
+    left: 50%;
+    height: 100%;
+    z-index: 0;
+
+}
+.card{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: ease all 0.5s;
+    background-color: #fff;
+    z-index: 0;
+}
+.card ul{
+    position: relative;
+    padding: 10px 15px;
+}
+.card ul li{
+    font-weight: 300;
+    transition: ease 0.5s all;
+}
+.card ul li:nth-child(1){
+    font-weight: 500;
+    font-size: 22px;
+}
+.card ul li:nth-child(2){
+    font-size: 18px;
+}
+.card ul li:nth-child(3){
+    font-size: 18px;
+}
+
+.first_card ul li:nth-child(1){
+    font-size: 34px;
+}
+.first_card ul li:nth-child(2){
+    font-size: 28px;
+}
+.first_card ul li:nth-child(3){
+    font-size: 28px;
+}
+.on{
+    width: 100vw;
+    height: 100vw;
+    top: 0;
+}
+
+#wrap .card_wrap:nth-child(1){transform: rotate(0deg); z-index: 1;}
+#wrap .card_wrap:nth-child(2){transform: rotate(15deg);}
+#wrap .card_wrap:nth-child(3){transform: rotate(30deg);}
+#wrap .card_wrap:nth-child(4){transform: rotate(45deg);}
+#wrap .card_wrap:nth-child(5){transform: rotate(60deg);}
+#wrap .card_wrap:nth-child(6){transform: rotate(75deg);}
+#wrap .card_wrap:nth-child(7){transform: rotate(90deg);}
+#wrap .card_wrap:nth-child(8){transform: rotate(105deg);}
+#wrap .card_wrap:nth-child(9){transform: rotate(120deg);}
+#wrap .card_wrap:nth-child(10){transform: rotate(135deg);}
+#wrap .card_wrap:nth-child(11){transform: rotate(150deg);}
+#wrap .card_wrap:nth-child(12){transform: rotate(165deg);}
+#wrap .card_wrap:nth-child(13){transform: rotate(180deg);}
+#wrap .card_wrap:nth-child(14){transform: rotate(195deg);}
+#wrap .card_wrap:nth-child(15){transform: rotate(210deg);}
+#wrap .card_wrap:nth-child(16){transform: rotate(225deg);}
+#wrap .card_wrap:nth-child(17){transform: rotate(240deg);}
+#wrap .card_wrap:nth-child(18){transform: rotate(255deg);}
+#wrap .card_wrap:nth-child(19){transform: rotate(270deg);}
+#wrap .card_wrap:nth-child(20){transform: rotate(285deg);}
+#wrap .card_wrap:nth-child(21){transform: rotate(300deg);}
+#wrap .card_wrap:nth-child(22){transform: rotate(315deg);}
+#wrap .card_wrap:nth-child(23){transform: rotate(330deg);}
+#wrap .card_wrap:nth-child(24){transform: rotate(345deg);}
+
+#wrap .card_wrap .card div{background-color:#666;}
+#wrap .card_wrap:nth-child(1) .card div{background-color:#F5dF4D;}
+#wrap .card_wrap:nth-child(2) .card div{background-color:#0F4C81;}
+#wrap .card_wrap:nth-child(3) .card div{background-color:#ff6f61 ;}
+#wrap .card_wrap:nth-child(4) .card div{background-color:#604c8d;}
+#wrap .card_wrap:nth-child(5) .card div{background-color:#88B04B;}
+#wrap .card_wrap:nth-child(6) .card div{background-color:#B3CEE5;}
+#wrap .card_wrap:nth-child(7) .card div{background-color:#F7CACA;}
+#wrap .card_wrap:nth-child(8) .card div{background-color:#964F4C;}
+#wrap .card_wrap:nth-child(9) .card div{background-color:#b565a7;}
+#wrap .card_wrap:nth-child(10) .card div{background-color:#009B77;}
+#wrap .card_wrap:nth-child(11) .card div{background-color:#dd4124 ;}
+#wrap .card_wrap:nth-child(12) .card div{background-color:#D65076;}
+#wrap .card_wrap:nth-child(13) .card div{background-color:#45B8AC;}
+#wrap .card_wrap:nth-child(14) .card div{background-color:#EFC050;}
+#wrap .card_wrap:nth-child(15) .card div{background-color:#5B5EA6;}
+#wrap .card_wrap:nth-child(16) .card div{background-color:#9B2335;}
+#wrap .card_wrap:nth-child(17) .card div{background-color:#DFCFBE;}
+#wrap .card_wrap:nth-child(18) .card div{background-color:#55B4B0;}
+#wrap .card_wrap:nth-child(19) .card div{background-color:#E15D44;}
+#wrap .card_wrap:nth-child(20) .card div{background-color:#7FCDCD;}
+#wrap .card_wrap:nth-child(21) .card div{background-color:#BC243C;}
+#wrap .card_wrap:nth-child(22) .card div{background-color:#C3447A;}
+#wrap .card_wrap:nth-child(23) .card div{background-color:#98B4D4;}
+#wrap .card_wrap:nth-child(24) .card div{background-color:#939597;}
+
+#wrap .card_wrap .card div{
+    width: 100%;
+    padding-bottom: 100%;
+}
+footer{
+    font-weight: 100;
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    z-index: 2;
+}
+
+footer li{
+    text-align: center;
+}
+.first_card{
+    width: 300px;
+    height: 450px;
+    top: -100px;
+}
+
+.background{
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 00%;
+    height: 100%;
+    overflow: hidden;
+    transition: ease 0.8s width;
+    background-color: #F5dF4D;
+
+}
+.bg_wrap{
+    width: 100vw;
+    height: 100%;
+    background-color: #0000004f;
+}
+.bg_section{
+    transform: translateY(-50%);
+    position: absolute;
+    width: 100vw;
+    color: #fff;
+    align-content: space-between;
+    top: 50%;
+    
+}
+.background h2{
+    max-width: 700px;
+
+    padding: 0px 10px 0 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.bg_section img{
+    width: calc(100% - 10px);
+    max-width: 450px;
+    padding: 0 10px;
+    margin-top: 30px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.bg_section span{
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 760px;
+    margin-top: 30px;
+    display: block;
+    padding: 0 10px ;
+}
+.bg_section p {
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 760px;
+    margin-top: 10px;
+    display: block;
+}
+
+.bg_wrap .fake_header{
+    position: absolute;
+    color: #fff;
+    top: 0px;
+    width: 100vw;
+
+    z-index: 3;
+}
+.bg_wrap .title{
+    color: #fff;
+}
+.fake_footer{
+    font-weight: 100;
+    position: absolute;
+    bottom: 3%;
+    width: 100vw;
+    z-index: 3;
+}
+
+.fake_footer li{
+    text-align: center;
+    color: #fff;
+}
+header > .title .span, .name_result .span{
+    background-color: #fff;
+}
+.bg_border{
+    top: 0;
+    margin-top: 20px;
+    z-index: -1;
+    width: 150px;
+    height: 150px;
+    right: 50%;
+    position: absolute;
+}
+.bg_border .border_section{
+    border: 3px solid;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.bg_border .inner_space{
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    height: 80%;
+    top: 50%;
+    width: 50%;
+    transform: translateY(-50%);
+    margin: auto 0;
+}
+.fake_header .inner_space div{
+    width: 100%;
+    height: 100%;
+    background-color: #0000004f;
+}
+.fake_header .span{
+    
+    display: inline-block;
+}
+.fake_header .span p{
+    background-color: #0000004f;
+}
+
+@media only screen and (max-width: 760px) {
+    .title{
+        font-size: 1em;
+        height: 25px;
+        margin-top: 30px;
+    }
+    .bg_border{
+        margin-top: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .name_result{
+        font-size: 1em;
+    }
+    .background h2{
+        font-size: 12px;
+        padding: 0px 10px 0 10px;
+    }
+    .name_result{
+        margin: 0;
+    }
+    .bg_section img{
+        margin-top: 10px;
+    }
+    .bg_section span{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .bg_section p{
+        font-size: 10px;
+    }
+    .first_card{
+        width: 250px;
+        height: 375px;
+        top: -50px;
+    }
+    .first_card ul li:nth-child(1){
+        font-size: 28px;
+    }
+    .first_card ul li:nth-child(2) {
+        font-size: 22px;
+    }
+    .first_card ul li:nth-child(3) {
+        font-size: 22px;
+    }
+    footer li, .fake_footer li{
+        font-size: 12px;
+    }
+    header > .title .span{
+        background-color: unset;
+    }
+  }
+
+
+
+  @media only screen and (max-height: 900px) {
+    .title{
+        font-size: 1em;
+        height: 25px;
+        margin-top: 30px;
+    }
+    .bg_border{
+        margin-top: 10px;
+        width: 80px;
+        height: 80px;
+    }
+    .name_result{
+        font-size: 1em;
+    }
+    .background h2{
+        font-size: 12px;
+        padding: 0px 10px 0 10px;
+    }
+    .name_result{
+        margin: 0;
+    }
+    .bg_section img{
+        margin-top: 10px;
+    }
+    .bg_section span{
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .bg_section p{
+        font-size: 10px;
+    }
+    .first_card{
+        width: 250px;
+        height: 375px;
+        top: -50px;
+    }
+    .first_card ul li:nth-child(1){
+        font-size: 28px;
+    }
+    .first_card ul li:nth-child(2) {
+        font-size: 22px;
+    }
+    .first_card ul li:nth-child(3) {
+        font-size: 22px;
+    }
+    footer li, .fake_footer li{
+        font-size: 12px;
+    }
+  }

@@ -1,0 +1,1327 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+body{
+    font-size: 0.938em;
+}
+li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    position: relative;
+}
+.headerInner .keywordList{
+    overflow: hidden;
+    position: absolute;
+    top: 41px;
+    right: -125px;
+    width: 100px;
+    padding-right: 15px;
+}
+.headerInner .keywordList .controlArea{
+    position: absolute;
+    top: -2px;
+    right: 0;
+}
+.headerInner .controlArea a:first-child{
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #bababa;
+    border-left: 6px solid transparent;
+}
+.headerInner .controlArea a:last-child{
+    border-top: 7px solid #bababa;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+.headerInner .controlArea a{
+    display: block;
+    margin: 5px 0;
+    line-height: 0;
+}
+.keywordSlide{
+    cursor: pointer;
+}
+.keywordList ol{
+    height: 24px;
+
+}
+.keywordList ol li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 16px;
+}
+.headerInner{
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+header .headerLogo{
+    position: absolute;
+    top: 20.5px;
+    cursor: pointer;
+}
+header .snsLogo{
+    cursor: pointer;
+    position: absolute;
+    top: 29px;
+    right: 0;
+    background-color: #4769b2;
+    background-position-y: -150px;
+    width: 42px;
+    height: 42px;
+    margin-left: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    }
+header .snsLogo img{
+    position: absolute;
+    width: 100%;
+    top: -167px;
+}
+.banner1{
+    background-image: url("https://www.snlib.go.kr/include/image/ct/main/bg_main_visual.jpg");
+    background-size: cover;
+    padding: 70px 15px 50px;
+    
+}
+.searchWrap{
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 30px 0 38px 80px;
+    font-size: 1.071em;
+}
+
+.searchBox{
+    position: relative;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    border: 2px solid #37558d;
+}
+.searchSelection{
+    font-size: 16px;
+    width: 160px;
+    padding: 0 20px 0 5px;
+    border: 0;
+}
+.searchBox .keywordSearch{
+    width: 100%;
+    position: relative;
+
+}
+.searchBox .keywordSearch input{
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    border: 0;
+}
+.searchBox a{
+    background-color: #37558d;
+    position: relative;
+    right: 0;
+    height: 44px;
+    width: 110px;
+    background-image: url("https://www.snlib.go.kr/include/image/common/ico_search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu{
+    border-top: 1px solid #dedede;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+    position: relative;
+}
+.menu .subMenuWrap{
+    position: relative;
+    display: flex;
+    height: 50px;
+    max-width: 1149px;
+    margin: 0 auto;
+    padding-right: 51px;
+}
+.menu > ul > .subMenu{
+    position: relative;
+    width: 16.666%;
+    height: 100%;
+    text-align: center;
+}
+.menu > ul > li > a{
+    line-height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.menu ul li ul{
+    position: relative;
+    height: 250px;
+    padding: 10px 15px;
+    text-align: left;
+    z-index: 2;
+    border-right: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+}
+.firstUnderMenu{
+    border-left: 1px solid #dedede;
+}
+/*.menu ul li ul li{
+    text-align: center;
+}*/
+.menu ul li ul li a{
+    display: inline-block;
+    text-align: center;
+}
+.subMenu ul{
+    display: none;
+    background-color: #fff;
+}
+.subMenu ul li{
+    line-height: 1.6;
+}
+.subMenu a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.subMenu a{
+    margin: 2px 0;
+    color: #555;
+}
+.subMenuBg{
+    top: 50px;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px solid #dedede;
+    background-color: #fff;
+    max-width: 1149px;
+}
+.subMenuWrap:hover .subMenuBg{
+    display: block;
+    height: 270px;
+}
+.subMenuWrap:hover .subMenu ul{
+    display: block;
+}
+.menuButtonWrap{
+    width: 100%;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: 1200px;
+    position: absolute;
+    top: 0;
+}
+.menuBar{
+    top: 0;
+    display: block;
+    border-left: 1px solid #dedede;
+    border-right: 1px solid #dedede;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.menuBar span{
+    width: 25px;
+    display: block;
+    height: 2.5px;
+    background-color: #acacac;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+}
+
+.menuBar span:nth-child(1){
+    top: calc(50% - 10px);
+}
+.menuBar span:nth-child(2){
+    top: calc(50%);
+}
+.menuBar span:nth-child(3){
+    top: calc(50% + 10px);
+}
+
+.slogan{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.slogan img{
+    max-width: 50%;
+}
+.sectionWrap{
+    padding: 30px 0;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.sectionWrap > div{
+    
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height: 200px;
+}
+.sectionWrap > div:nth-child(1){
+    width: 29.166%;
+    
+}
+.sectionWrap > div:nth-child(2){
+    width: 30.833%;
+    margin-left: 30px;
+}
+.sectionWrap > div:nth-child(3){
+    width: 35%;
+    position: absolute;
+    right: 0;
+}
+.firstSection{
+    background-color: #fff;
+}
+.firstSection h2{
+    color: #4972bc;
+    margin-bottom: 15px;
+}
+.inputWrap{
+    position: relative;
+    margin-top: 20px;
+    padding-right: 85px;
+}
+.inputWrap a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 81px;
+    font-weight: 600;
+    font-size: 1.133em;
+    line-height: 81px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #4972bc;
+    text-decoration: none;
+}
+.inputWrap div{
+    overflow: hidden;
+    position: relative;
+    height: 38px;
+    padding-left: 48px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    margin-bottom: 5px;
+}
+.inputWrap span{
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    padding: 3px 5px;
+    background-color: #4972bc;
+    
+}
+.inputWrap input{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    border: 0;
+    background-color: #f4f4f4;
+}
+.inputInfo{
+    margin-top: 15px;
+}
+.inputInfo a{
+    margin-left: 8px;
+    padding-left: 10px;
+    float: left;
+    position: relative;
+    font-size: 14px;
+}
+.inputInfo a::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 12px;
+    margin-top: -6px;
+    border-left: 2px solid #dbdbdb;
+}
+.inputInfo a:nth-child(1){
+    margin-left: 0;
+    padding-left: 0;
+}
+.inputInfo a:nth-child(1)::before{
+    content: none;
+}
+
+.secondSection{
+    background-color: #7db3e1;
+}
+.secondSection h2{
+    margin-bottom: 15px;
+    font-size: 1.467em;
+    line-height: 1;
+    color: #fff;
+}
+.secondSection ul li{
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: 4px 0;
+    padding-left: 33px;
+    font-size: 1.067em;
+    line-height: 30px;
+    color: #fff;
+    box-sizing: border-box;
+    background: url("https://www.snlib.go.kr/include/image/common/ico_main_my.png") 0 0 no-repeat;
+    cursor: pointer;
+}
+.secondSection ul li:hover{
+    text-decoration: underline;
+}
+.secondSection ul li:nth-child(1){
+    background-position: 0 0px;
+}
+.secondSection ul li:nth-child(2){
+    background-position: 0 -30px;
+}
+.secondSection ul li:nth-child(3){
+    background-position: 0 -60px;
+}
+.secondSection ul li:nth-child(4){
+    background-position: 0 -90px;
+}
+.secondSection ul li:nth-child(5){
+    background-position: 0 -120px;
+}
+.secondSection ul li:nth-child(6){
+    background-position: 0 -150px;
+}
+
+
+.thirdSection{
+    background-color: #4972bc;
+    color: #fff;
+
+}
+.thirdSection .schedule{
+    position: relative;
+    top: 10px;
+}
+
+.thirdSection .month{
+    top: 10px;
+    left: 0;
+    margin: 0 22px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    border: 2px solid #fff;
+    font-size: 2.267em;
+    color: #fff;
+}
+.thirdSection .schedule .days{
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120px;
+}
+.thirdSection .schedule .days li{
+    background-color: #d2e4f5;
+    color: #4972bc;
+    float: left;
+    width: 42px;
+    height: 42px;
+    margin: 0 6px 6px 0;
+    font-size: 1.533em;
+    line-height: 42px;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.thirdSection .dayoff{
+    position: relative;
+    top:24px;
+}
+.thirdSection .dayoff i{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.thirdSection .dayoff li{
+    font-size: 13px;
+    line-height: 19px;
+    color: #fff;
+}
+.thirdSection .dayoff li:nth-child(1) i{
+    background-color: #d2e4f5
+}
+.thirdSection .dayoff li:nth-child(2) i{
+    border: 2px solid #fff;
+}
+.thirdSection p{
+    font-size: 15px;
+    text-align: right;
+    letter-spacing: -0.07em;
+    margin-top: 5px;
+}
+
+.banner2 .shortcut{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 0;
+}
+.banner2 .shortcut ul{
+    display: inline-block;
+    width: 100%;
+}
+.banner2 .shortcut li{
+    float: left;
+    width: 10%;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+.banner2 .shortcut li i{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background: url("https://www.snlib.go.kr/include/image/ct/main/ico_shortcut.png");
+}
+
+.shortcut li:nth-child(1) i{
+    background-position: 0px 0px;
+}
+.shortcut li:nth-child(2) i{
+    background-position: -80px 0px;
+}
+.shortcut li:nth-child(3) i{
+    background-position: -160px 0px;
+}
+.shortcut li:nth-child(4) i{
+    background-position: -240px 0px;
+}
+.shortcut li:nth-child(5) i{
+    background-position: -320px 0px;
+}
+.shortcut li:nth-child(6) i{
+    background-position: -400px 0px;
+}
+.shortcut li:nth-child(7) i{
+    background-position: -480px 0px;
+}
+.shortcut li:nth-child(8) i{
+    background-position: -80px -80px;
+}
+.shortcut li:nth-child(9) i{
+    background-position: -160px -80px;
+}
+.shortcut li:nth-child(10) i{
+    background-position: -240px -80px;
+}
+
+
+.banner3{
+    padding: 30px 0;
+    background-color: #f3f4f4;
+}
+.infoWrap{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+.infoGroup{
+    
+    float: left;
+    width: 58.75%;
+    display: flex;
+}
+.infoGroup *{
+    color: #fff;
+}
+.infoBoard{
+    position: relative;
+    background-color: #fff;
+    float: right;
+    width: 38.333333333333333%;
+    height: 260px;
+}
+.openTime{
+    width: 52%;
+    background: #515665;
+    position: relative;
+    height: 260px;
+}
+.openTime div{
+    padding: 25px 20px;
+}
+.openTime div h2{
+    font-size: 20px;
+    color: #fff;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.openTime div ul li{
+    font-size: 16px;
+    margin-top: 5px;
+    color: #fff;
+    letter-spacing: -1px;
+}
+.openTime div ul li em{
+    font-style: normal;
+    color: #ffe683;
+}
+.inquiry{
+    position: relative;
+    height: 260px;
+    width: 29%;
+    text-align: center;
+    background-color: #4972bc;
+}
+.inquiry h2{
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.inquiry div{
+    padding: 25px 15px;
+}
+.inquiry div img{
+    margin-top: 15px;
+}
+.inquiry div ul{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    left: 0;
+    font-size: 1.200em;
+}
+.linkIcon{
+    width: 19%;
+}
+.linkIcon a{
+    display: block;
+    height: 50%;
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 1.333em;
+    line-height: 1;
+    box-sizing: border-box;
+    text-align: center;
+}
+.linkIcon a:first-child{
+    background-color: #7db3e1;
+}
+.linkIcon a:last-child{
+    background-color: #b1c3d2;
+}
+.linkIcon img{
+    display: block;
+    margin: 15px auto 0;
+}
+.infoBoard .tab{
+    overflow: hidden;
+    position: relative;
+    
+    border-bottom: 1px solid #e6e6e6;
+}
+.infoBoard .tab li{
+    float: left;
+    padding: 0 15px;
+    display: block;
+    line-height: 54px;
+    font-size: 1.313em;
+    color: #222;
+}
+.infoBoard .tab .tab_1{
+    border-bottom: 2px solid #666;
+    padding-bottom: 12px;
+    font-weight: bold;
+}
+.infoBoard > a{
+    right: 20px;
+    top: 18px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.infoBoard .tab img{
+    width: 100%;
+    height: 100%;
+}
+.noticeBoard{
+    padding: 15px 20px;
+}
+.noticeBoard ul li{
+    overflow: hidden;
+    position: relative;
+    padding-right: 90px;
+    line-height: 34px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.noticeBoard ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #666;
+}
+.noticeBoard ul li a:hover{
+    text-decoration: underline;
+}
+
+.banner4{
+    padding: 30px 0;
+}
+
+
+
+footer{
+    position: relative;
+    padding-bottom: 30px;
+    background-color: #585858;
+}
+footer ul{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+footer ul li{
+    display: inline-block;
+    padding: 10px 0;
+    vertical-align: top;
+    cursor: pointer;
+    z-index: 2;
+}
+footer ul li:first-child a{
+    color: #ffe683;
+}
+footer ul li a{
+    font-weight: 600;
+    line-height: 30px;
+    color: #eaeaea;
+}
+footer ul li + li{
+    margin-left: 15px;
+}
+footer .familySite{
+    margin: 0 auto;
+    position: absolute;
+    top: 11px;
+    right: -35px;
+    width: 100%;
+    max-width: 1200px;
+    transform: translateX(-50%);
+    left: calc(50% - 35px);
+    padding-right: 35px;
+}
+footer .familySite select{
+    float: right;
+    display: block;
+    width: 165px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 0.933em;
+    color: #fff;
+    border: 1px solid #a2a2a2;
+    background-color: rgba(255, 255, 255, 0.0);
+}
+footer .familySite select option{
+    color: #000;
+}
+footer .familySite a{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 34px;
+    font-size: 0.933em;
+    line-height: 26px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #a2a2a2;
+    border-left: 0;
+}
+footer .footerInfo{
+    padding-top: 20px;
+    border-top: 1px solid #757575;
+}
+footer address, cite{
+    line-height: 1.6;
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+}
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+.swiper-slide a{
+    margin-bottom: 8px;
+}
+.mySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 3px 3px 8px 0px grey;
+}
+
+.bookInfo{
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 58.75%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}  
+
+.bookInfo ul{
+    margin-bottom: 23px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.bookInfo .menuBar{
+    border: 1px solid #dedede;
+    border-left: 0;
+
+}
+.bookInfo ul li{
+    float: left;
+    width: 23%;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.bookInfo ul li:nth-child(4){
+    width: 31%;
+}
+.bookInfo ul li a{
+    display: block;
+    position: relative;
+    height: 100%;
+    font-size: 1.200em;
+    line-height: 48px;
+    letter-spacing: -0.05em;
+    border: 1px solid #e6e6e6;
+    border-left: 0;
+}
+.bookInfo ul li:first-child a{
+    font-weight: bold;
+    font-size: 1.300em;
+    color: #fff;
+    border-color: #515665;
+    background-color: #515665;
+}
+.innerBanner{
+    overflow: hidden;
+    background-color: #fff;
+    float: right;
+    width: 38.333333333333333%;
+    height: 340px;
+}
+.mySwiper .swiper-wrapper{
+    position: relative;   
+}
+.mySwiper .swiper-slide{
+    flex-direction: column;
+}
+.mySwiper .swiper-slide a{
+    display: block;
+    position: relative
+}
+.mySwiper .swiper-slide span{
+    display: block;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: -0.05em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 15px;
+}
+.mySwiper .swiper-slide span:first-child{
+    margin-top: 5px;
+}
+.mySwiper .swiper-button-prev,.mySwiper  .swiper-button-next{
+    margin-top: -42px;
+    width: 35px;
+    height: 56px;
+    background-size: auto;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+.mySwiper .swiper-button-prev *,.mySwiper  .swiper-button-next *{
+    font-size: 20px;
+    color: #fff;
+}
+.mySwiper .swiper-button-prev{
+    left: 0;
+}
+.mySwiper .swiper-button-next{
+    right: 0;
+}
+.mySwiper .swiper-button-next:after,.mySwiper  .swiper-button-prev:after{
+    font-size: medium!important;
+}
+.nextSwiper{
+    position: relative;
+}
+.nextSwiper a img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.nextSwiper .swiper-button-prev, .nextSwiper .swiper-button-next{
+    display: block;
+    float: left;
+    width: 26px;
+    height: 26px;
+}
+.controler{
+    position: absolute;
+    top: 00px!important;
+    right: 00px!important;
+    z-index: 20;
+    text-align: right;
+    background-color: #fff;
+    width: 78px;
+    height: 26px;
+}
+.controler *{
+    width: 26px;
+    height: 26px;
+    border: 1px solid;
+    top: auto;
+    left: auto;
+    right: auto;
+    position: relative;
+}
+
+
+
+
+/* Mobile Section */
+.mobileMenu{
+    transition: all ease 0.5s;
+    background-color: #4972bc;
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 280px;
+    height: 100%;
+    z-index: 10;
+    overflow-y: auto;
+}
+.bg{
+    display: none;
+    position: fixed;
+    z-index: 9;
+    background-color: #000;
+    opacity: 0.5;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.mobileLink{
+    background-color: #4c4c4c;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.libraryLink{
+    width: 170px;
+}
+.languageLink{
+    width: 110px;
+    float: right;
+    position: relative;
+}
+.mobileLink .button{
+    display: block;
+    line-height: 30px;
+    padding: 0 30px 0 15px;
+    color: #fff;
+    background: url("https://www.snlib.go.kr/include/image/common/arr_snb.png")100% center no-repeat;
+}
+.mobileLink .lgButton{
+    background-color: #666;
+}
+.mobileLink ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 12px 3px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.mobileLink ul li a{
+    display: block;
+    line-height: 30px;
+    border-bottom: 1px solid #d6d6d6;
+}
+.mobileLink ul{
+    display: none;
+}
+.buttonOff{
+    display: block!important;
+}
+.mobileClose{
+    display: none;
+    position: absolute;
+    left: 280px;
+    z-index: 10;
+}
+.mobileClose a{
+    display: block;
+    width: 32px;
+    height: 32px;
+
+}
+.mobileClose a span{
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    transform: translate(0, -50%);
+}
+.mobileClose a span:last-child{
+    transform: rotate(45deg);
+}
+.mobileClose a span:first-child{
+    transform: rotate(-45deg);
+}
+.mobileMenuUnder{
+    overflow: hidden;
+    margin-top: 30px;
+}
+.mobileMenuUnder > li{
+    border-bottom: 1px solid #3059a2;
+}
+.mobileMenuUnder > li > a{
+    display: block;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+}
+.mobileMenuUnder > li > ul{
+    display: none;
+}
+.mobileMenuUnder > li > ul > li{
+    background-color: #fff;
+    border-top: 1px solid #e4e4e4;
+}
+.mobileMenuUnder > li > ul > li a{
+    line-height: 1.6;
+    display: block;
+    padding: 7px 10px;
+    font-size: 16px;
+}
+.qrBox{
+    overflow: hidden;
+    margin: 18px;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.mobileSearchWrap{
+    display: none;
+}
+#mobile{
+    display: none;
+}
+@media only screen and (max-width: 1100px) {
+    .searchWrap {
+      display: none;
+    }
+    #mobile{
+        display: block;
+    }
+    header .headerLogo{
+        position: relative;
+        height: 50px;
+        padding: 5px 0;
+        width: 240px;
+        margin: 0 auto;
+        top: auto;
+        display: block;
+    }
+    header .snsLogo{
+        display: none;
+    }
+    header .headerLogo img{
+        height: 100%;
+    }
+    .searchButton{
+        background:url("https://www.snlib.go.kr/include/image/common/btn_snb.png") 0 -80px no-repeat;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        background-size: 20px auto;
+    }
+    .mobileSearchWrap{
+        z-index: 11;
+        transition: ease all 0.5s;
+        display: block;
+        position: fixed;
+        top: -120px;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        padding: 30px 15px;
+        background-color: #fff;
+        border-bottom: 1px solid #eee;
+    }
+    #mobileSearch{
+        max-width: 600px;
+    }
+    .menu{
+        display: none;
+    }
+    .sectionWrap{
+        padding: 30px 15px;
+    }
+    .sectionWrap > div:nth-child(1){
+        display: none;
+    }
+    .sectionWrap > div:nth-child(2){
+        width: 45%;
+        margin: 0;
+    }
+    .sectionWrap > div:nth-child(3){
+        position: absolute;
+        right: 15px;
+        width: calc(55% - 45px);
+    }
+    .banner3{
+        padding: 30px 15px;
+    }
+    
+    .infoWrap{
+        flex-direction: column;
+    }
+    .infoGroup{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .infoBoard{
+
+        width: 100%;
+        float: none;
+    }
+
+    .banner4{
+        padding: 30px 15px;
+    }
+    .bookInfo{
+        width: 100%;
+    }
+    .innerBanner{
+        width:640px;
+        height: 460px;
+        margin: 0 auto;
+    }
+    .footerInner ul{
+        padding: 0 15px;
+    }
+    .footerInner ul li{
+        display: none;
+    }
+    .footerInner ul li:first-child{
+        display: block;
+    }
+
+
+    .secondSection ul li{
+        font-size: 14px;
+    }
+    #mobile{
+        left: 0;
+        right: inherit;
+        top: 50%;
+        border: none;
+        transform: translateY(-50%);
+    }
+    #mobile span{
+        background-color: #000;
+        height: 1px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .sectionWrap{
+        display: block;
+    }
+    .sectionWrap > div:nth-child(2){
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+        height: auto;
+    }
+    .sectionWrap > div:nth-child(3){
+        width: 100%;
+        position: relative;
+        right: 0;
+    }
+    .secondSection ul li{
+        font-size: 14px;
+        width: calc(100% / 2);
+    }
+    .thirdSection .schedule .days{
+        float: right;
+        left: auto;
+        right: 0;
+        width: auto;
+    }
+    .banner2 .shortcut li{
+        width: 25%;
+    }/*
+    .infoWrap{
+        display: block;
+        height: auto;
+    }
+    .infoGroup{
+        display: block;
+        height: auto;
+    }
+    .infoWrap .openTime{
+        width: 70%;
+        float: left;
+    }
+    .infoWrap .inquiry{
+        width: 30%;
+        float: left;
+    }
+    .infoWrap .linkIcon{
+        float: left;
+        width: 100%;
+    }*/
+    .infoGroup{
+        display: block;
+    }
+    .openTime{
+        width: 70%;
+        float: left;
+    }
+    .inquiry{
+        width: 30%;
+        float: left;
+    }
+    .linkIcon{
+        float: left;
+        width: 100%;
+        display: flex;
+    }
+    .linkIcon a{
+        height: 100%;
+        width: 50%;
+        padding: 20px 0;
+    }
+    .bookInfo{
+        height: inherit;
+    }
+    .bookInfo ul li:first-child a{
+        font-size: 12px;
+    }
+    .bookInfo ul li a{
+        font-size: 12px;
+    }
+    .innerBanner{
+        width: 80%;
+        height: inherit;
+    }
+    .swiper-container{
+        margin-bottom: 15px;
+    }
+    .banner2 .shortcut li{
+        font-size: 12px;
+    }
+    .openTime{
+        width: 100%;
+    }
+    .inquiry{
+        width: 100%;
+    }
+    .openTime div ul li{
+        font-size: 14px;
+    }
+    .bookInfo ul{
+        height: auto;
+    }
+    .bookInfo ul li{
+        width: 50%;
+    }
+    .bookInfo ul li:nth-child(4){
+        width: 50%;
+    }
+}
+
+
+
+.nbUnder_2{
+    display: none;
+}

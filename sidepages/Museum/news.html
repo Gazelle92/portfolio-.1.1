@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새소식</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./css/colume.css"/>
+    <link rel="stylesheet" href="./css/board.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    
+</head>
+<body>
+  <header>
+    <a href="index.html"><img class="header_logo" src="./img/header_logo.png" alt="중앙박물관 로고"/></a>
+    <ul>
+      <li><a href="./index.html">전시</a><div class="header_border"></div></li>
+      <li><a href="./edu.html">교육행사</a><div class="header_border"></div></li>
+      <li><a href="./filter.html">소장품</a><div class="header_border"></div></li>
+      <li><a href="./board.html">학술출판</a><div class="header_border"></div></li>
+      <li><a href="./news.html">소식참여</a><div class="header_border"></div></li>
+    </ul>
+    <div id="border"></div>
+</header>
+
+<div id="wrap">
+  <section class="searchbox" id="main"> 
+
+        <h1>알림</h1>
+        <div class="category">
+          <ul>
+            <li><a href="#">전체</a></li>
+            <li><a href="#">중앙박물관</a></li>
+            <li><a href="#">소속박물관</a></li>
+          </ul>
+        </div>
+        <div class="seach_cover">
+            <div class="board_search">
+                <input type="text" id="value" placeholder="제목, 작성자, 내용"
+                    onKeypress="javascript:if(event.keyCode==13) {filter()}">
+                <input id="search_button" src="https://www.museum.go.kr/ux/content/images/common/btn/btn_board_search.png" type="image" alt="검색">
+            </div>
+        </div>
+        <div class="board board_b" id="item_header">
+          <ul>
+            <li class="item_number">번호</li>
+            <li>구분</li>
+            <li>박물관</li>
+            <li class="name">제목</li>
+            <li>작성자</li>
+            <li>작성일</li>
+            <li>조회</li>
+          </ul>
+        </div>
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4505</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">정세빈</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4504</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">코로나19 확진자의 특별전시관 방문에 따른 조치결과 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-17</li>
+            <li>491</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">박물관 보존과학 제8집</a></li>
+            <li class="writer">황주혜</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>도서관</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">[6.21(월)~6.27(일)] 도서관 이용 사전예약 안내</a></li>
+            <li class="writer">김주연</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>학술행사</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">2021년 제46회 국립중앙박물관 그리기 잔치 입상자 공지</a></li>
+            <li class="writer">김선미</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>상설전시</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">[6.7(월)~6.13(일)] 세계문화관 중앙아시아실 부분 휴실 안내</a></li>
+            <li class="writer">권영우</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+        <div class="board board_b item">
+          <ul>
+            <li class="item_number">4503</li>
+            <li>소식</li>
+            <li>중앙박물관</li>
+            <li class="name name_board"><a href="#">분실물 정보 안내</a></li>
+            <li class="writer">고운용</li>
+            <li>2021-06-21</li>
+            <li>23</li>
+          </ul>
+        </div>
+
+</section>
+
+<nav class="section3">
+  <div class="info">
+    <div class="info_wrap">
+    <ul class="info_section">
+      <li>관람안내</li>
+      <li>전시해설</li>
+      <li>예약하기</li>
+      <li>관람/편의시설</li>
+      <li>오시는길</li>
+    </ul>
+    <ul class="info_section">
+      <li>상설전시</li>
+      <li>특별전시</li>
+      <li>디지털 실감 영상관</li>
+      <li>온라인전시관</li>
+      <li>우리문화재 국외전시</li>
+      <li>소속국립박물관전시</li>
+      <li>전시도록</li>
+      <li>외국박물관한국문화재</li>
+    </ul>
+    <ul class="info_section">
+      <li>교육신청</li>
+      <li>교육자료</li>
+      <li>교육소식</li>
+      <li>스튜디오 몬</li>
+      <li>문화행사</li>
+      <li>온라인 영상 학습 자료실</li>
+    </ul>
+    <ul class="info_section">
+      <li>큐레이터 추천 소장품</li>
+      <li>소장품검색</li>
+      <li>국보/보물 검색</li>
+      <li>수어동영상</li>
+      <li>소장품 열람/복제</li>
+      <li>문화재 기증안내</li>
+    </ul>
+  </div>
+
+  <div class="info_wrap">
+    <ul class="info_section">
+      <li>정기간행물</li>
+      <li>고고학</li>
+      <li>역사학</li>
+      <li>미술사학</li>
+      <li>아시아학</li>
+      <li>도서관</li>
+      <li>기타</li>
+    </ul>
+    <ul class="info_section">
+      <li>소식</li>
+      <li>영상</li>
+      <li>자원봉사안내</li>
+      <li>학예사 자격증 안내</li>
+      <li>전자민원</li>
+      <li>정보공개</li>
+    </ul>
+    <ul class="info_section">
+      <li>인사말</li>
+      <li>비전과 전략</li>
+      <li>발자취</li>
+      <li>조직 및 업무</li>
+      <li>시설 소개</li>
+      <li>수장고</li>
+      <li>박물관관련자료</li>
+    </ul>
+    <ul class="info_border">
+      <li><div class="info_line"></div>어린이박물관</li>
+      <li><div class="info_line"></div>학예사자격증</li>
+      <li><div class="info_line"></div>e뮤지엄</li>
+      <li><div class="info_line"></div>외규장각 의궤 원문</li>
+      <li><div class="info_line"></div>이러닝</li>
+      <li><div class="info_line"></div>박물관 신문</li>
+      <li><div class="info_line"></div>문화상품점</li>
+    </ul>
+  </div>
+  </div>
+</nav>
+
+<footer>
+  <div class="footer sec1">
+    <div class="sec1_info1">
+      <h4>문화유산표준관리시스템</h4>
+      <h4>VCM 가상명품박물관</h4>
+      <h4>청년멘토</h4>
+    </div>
+    <div class="sec1_info2">
+      <h4>개인정보처리방침</h4>
+      <span>이용약관</span>
+      <span>전자민원</span>
+      <span>공공데이터개방</span>
+      <span>저작권정책</span>
+      <span>클린신고센터</span>
+      <span>찾아오시는길</span>
+    </div>
+  </div>
+
+  <div class="footer sec3">
+    <span>04383 서울시 용산구 서빙고로 137(용산동6가 168-6)<br>
+      대표전화 02-2077-9000</span>
+    
+    <div class="sns_link">
+      <div class="border"><a href="#">FACEBOOK</a></div>
+      <div class="border"><a href="#">INSTAGRAM</a></div>
+      <div class="border"><a href="#">YOUTUBE</a></div>
+    </div>
+  </div>
+  <div class="footer sec2">
+    <div class="modal_box">
+      <div class="modal">
+        <span>관련사이트 바로가기
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>국립박물관 문화재단</li>
+            <li>국립중앙박물관회</li>
+            <li>사단법인 한국박물관협회</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal">
+        <span>소속박물관 바로가기
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>국립경주박물관</li>
+            <li>국립전주박물관</li>
+            <li>국립대구박물관</li>
+            <li>국립광주박물관</li>
+            <li>국립부여박물관</li>
+            <li>국립공주박물관</li>
+            <li>국립진주박물관</li>
+            <li>국립청주박물관</li>
+            <li>국립김해박물관</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal">
+        <span>가이드북 다운로드
+          <span class="material-icons">expand_less</span>
+        </span>
+        <div class="modal_table">
+          <ul>
+            <li>한국어(PDF)</li>
+            <li>English(PDF)</li>
+            <li>中文(PDF)</li>
+            <li>日本語(PDF)</li>
+            <li>Русский(PDF)</li>
+            <li>Français(PDF)</li>
+            <li>박물관 야외정원 안내</li>
+            <li>프로그램(5월~7월)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4>© National Museum of Korea.</h4>
+  </div>
+  <div class="grid_vertical v_1 footer_v"></div>
+  <div class="grid_vertical v_2 footer_v"></div>
+  <div class="grid_horizontal h_1 footer_h"></div>
+  <div class="grid_horizontal h_2 footer_h"></div>
+  <div class="grid_horizontal h_3 footer_h"></div>
+
+</footer>
+</div>
+<script src="./js/main.js" defer></script>
+<script src="./js/jquery.js" defer></script>
+<script src="./js/board.js" defer></script>
+</body>
+
+</html>
